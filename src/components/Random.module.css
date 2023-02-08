@@ -1,0 +1,13 @@
+.random {
+  padding: 0.5rem;
+  margin-right: 4rem;
+  border: solid 1px whitesmoke;
+  border-radius: 5px;
+  background-color: rgba(119, 46, 186, 0.6);
+  color: white;
+}
+
+.random:hover {
+  cursor: pointer;
+  background-color: rgba(137, 43, 226, 0.315);
+}
