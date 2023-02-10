@@ -9,8 +9,9 @@ const Card = () => {
       <div className={style.props}>
         <span>Name</span>
         <span>id</span>
-        <span>planet</span>
-        <span>some</span>
+        <span>homeworld</span>
+        <span>species</span>
+        <span>heigth</span>
       </div>
     </div>
   );

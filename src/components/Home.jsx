@@ -3,12 +3,12 @@ import NavBar from './NavBar';
 import Cards from './Cards';
 import List from './List';
 
-const Home = () => {
+const Home = ({ characters }) => {
   return (
     <div>
       <NavBar />
       <Cards />
-      <List />
+      <List characters={characters} />
     </div>
   );
 };

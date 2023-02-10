@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './Search';
 import style from './NavBar.module.css';
 import Random from './Random';
+import AllCharacters from './AllCharacters';
 
 const NavBar = () => {
   return (
@@ -10,7 +11,7 @@ const NavBar = () => {
         <Random />
         <Search />
       </div>
-      <button>All Characters</button>
+      <AllCharacters />
       <div className={style.randomAndSearch}>
         <Random />
         <Search />
