@@ -6,3 +6,37 @@
   /* background-color: whitesmoke;
   opacity: 0.5; */
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  align-items: center;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: rgba(167, 113, 218, 0.908);
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 0.5px solid whitesmoke;
+  color: whitesmoke;
+  border-radius: 50%;
+  background-color: rgba(137, 43, 226, 0.315);
+}
+
+.btn:disabled {
+  opacity: 0;
+}
+
+.img {
+  background-color: none;
+}

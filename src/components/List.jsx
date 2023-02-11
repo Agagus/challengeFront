@@ -7,7 +7,7 @@ const List = ({ characters }) => {
       <ul>
         {characters &&
           characters.map(function (character) {
-            return <li>{character.name}</li>;
+            return <li>{character.id}</li>;
           })}
         <li></li>
       </ul>

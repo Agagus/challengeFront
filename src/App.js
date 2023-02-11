@@ -8,16 +8,19 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   //mediante la siguiente funcion hago la peticion a la API, y guardo la data en el state.
-  const getAllChar = async () => {
+  const getAllCharacters = async () => {
     const response = await axios.get(
       'https://akabab.github.io/starwars-api/api/all.json'
     );
-    setCharacters(response.data);
-    console.log(characters);
+    // console.log(response);
+    const data = await response.data;
+    // console.log(data);
+    setCharacters(data);
+    // console.log(characters);
   };
 
   useEffect(() => {
-    getAllChar();
+    getAllCharacters();
   }, []);
 
   return (
