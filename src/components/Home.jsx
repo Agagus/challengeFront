@@ -7,9 +7,9 @@ const Home = ({ characters }) => {
   console.log(characters);
   return (
     <div>
-      <NavBar />
+      <NavBar characters={characters} />
       <Cards characters={characters} />
-      <List characters={characters} />
+      {/* <List characters={characters} /> */}
     </div>
   );
 };

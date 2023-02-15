@@ -4,8 +4,6 @@ import Card from './Card';
 import style from './Cards.module.css';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
-// const axios = require('axios');
-// import * as axios from 'axios';
 
 const Cards = ({ characters }) => {
   // let indexLeft = Math.floor(
@@ -74,7 +72,7 @@ const Cards = ({ characters }) => {
               </div>
             );
         })}
-      {/* <p>VS</p> */}
+      {/* <image src={image} alt='versus' /> */}
       {characters &&
         characters.reverse().map(function (character) {
           if (character.id === currentCharacterBis)
