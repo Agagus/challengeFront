@@ -6,6 +6,7 @@
 }
 
 .props {
+  margin-left: 1rem;
   padding: 2rem;
   width: 200px;
   display: flex;

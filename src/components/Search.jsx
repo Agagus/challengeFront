@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Search.module.css';
 
-const Search = () => {
+const Search = ({ search, card }) => {
+  const [input, setInput] = useState('');
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setInput(e.target.value);
+    console.log(input);
+  };
+
   return (
     <div className={style.container}>
-      <input className={style.input} placeholder='Busca tu personaje'></input>
-      <button className={style.button}>Search</button>
+      <input
+        className={style.input}
+        placeholder='Busca tu personaje'
+        type='text'
+        value={input}
+        onChange={handleChange}
+      ></input>
+      <button className={style.button} onClick={() => search(input, card)}>
+        Search
+      </button>
     </div>
   );
 };

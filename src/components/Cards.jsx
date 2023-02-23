@@ -5,11 +5,7 @@ import style from './Cards.module.css';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 
-const Cards = ({ characters }) => {
-  // let indexLeft = Math.floor(
-  //   Math.random() * (characters.length - 1 - 0 + 1) + 0
-  // );
-  // console.log(indexLeft);
+const Cards = ({ characters, cards }) => {
   const total = characters.length + 1; //88
 
   const [currentCharacter, setCurrentCharacter] = useState(1);
@@ -37,7 +33,20 @@ const Cards = ({ characters }) => {
 
   return (
     <div className={style.card}>
-      {characters &&
+      {cards.cardLeft ? (
+        // <div className={style.container}>
+        <Card
+          id={cards.cardLeft.id}
+          name={cards.cardLeft.name}
+          image={cards.cardLeft.image}
+          homeworld={cards.cardLeft.homeworld}
+          species={cards.cardLeft.species}
+          height={cards.cardLeft.height}
+          // total={total}
+        />
+      ) : (
+        // </div>
+        characters &&
         characters.map(function (character) {
           if (character.id === currentCharacter)
             return (
@@ -71,9 +80,21 @@ const Cards = ({ characters }) => {
                 )}
               </div>
             );
-        })}
-      {/* <image src={image} alt='versus' /> */}
-      {characters &&
+        })
+      )}
+      ;
+      {cards.cardRight ? (
+        <Card
+          id={cards.cardRight.id}
+          name={cards.cardRight.name}
+          image={cards.cardRight.image}
+          homeworld={cards.cardRight.homeworld}
+          species={cards.cardRight.species}
+          height={cards.cardRight.height}
+          // total={total}
+        />
+      ) : (
+        characters &&
         characters.reverse().map(function (character) {
           if (character.id === currentCharacterBis)
             return (
@@ -107,7 +128,8 @@ const Cards = ({ characters }) => {
                 )}
               </div>
             );
-        })}
+        })
+      )}
     </div>
   );
 };

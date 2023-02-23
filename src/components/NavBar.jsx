@@ -4,17 +4,17 @@ import style from './NavBar.module.css';
 import Random from './Random';
 import AllCharacters from './AllCharacters';
 
-const NavBar = ({ characters }) => {
+const NavBar = ({ random, search, characters }) => {
   return (
     <div className={style.container}>
       <div className={style.randomAndSearch}>
-        <Random />
-        <Search />
+        <Random random={random} card='left' />
+        <Search search={search} card='left' />
       </div>
       <AllCharacters characters={characters} />
       <div className={style.randomAndSearch}>
-        <Random />
-        <Search />
+        <Random random={random} card='right' characters={characters} />
+        <Search search={search} card='right' />
       </div>
     </div>
   );
