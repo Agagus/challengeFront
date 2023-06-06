@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
 import Cards from './Cards';
+import style from './Home.module.css'
 // import List from './List';
 
 const Home = ({ characters }) => {
@@ -31,7 +32,7 @@ const Home = ({ characters }) => {
   };
 
   return (
-    <div>
+    <div className={style.home}>
       <NavBar search={search} random={random} characters={characters} />
       {/* <Cards characters={characters} /> */}
       <Cards cards={cards} characters={characters} />

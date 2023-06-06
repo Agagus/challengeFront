@@ -1,11 +1,15 @@
 .card {
+  margin-top: 15rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-self: center;
 }
 
 .container {
+  padding-left: 4rem;
+  padding-right: 4rem;
   display: grid;
   grid-template-columns: 50px 1fr 50px;
   align-items: center;

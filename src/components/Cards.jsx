@@ -82,7 +82,7 @@ const Cards = ({ characters, cards }) => {
             );
         })
       )}
-      ;
+      
       {cards.cardRight ? (
         <Card
           id={cards.cardRight.id}
