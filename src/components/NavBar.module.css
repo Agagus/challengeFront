@@ -2,7 +2,7 @@
   padding: 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-  position:fixed;
+  /* position:fixed; */
   gap: 1rem;
 }
 
